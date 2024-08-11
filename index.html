@@ -7,7 +7,41 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to Anushtup's Corner!</h1>
+    <div class="content-wrapper">
+        <h1>Welcome to Anushtup's Corner!</h1>
+        <div class="about-me">
+            <div class="text">
+                <p>Hi! I'm Anushtup Nandy, a graduate student in Mechanical 
+                    Engineering at Columbia University from India. 
+                    I love robotics, food, birds, travelling and journaling.
+                    I've done my undergradaute in Mechanical Eng. from BITS-Pilani in India
+                    and I specialized in Robotics, and I'll also be specializing in Robotics at
+                    Columbia! 
+                </p>
+                <p>
+                    On the timeline below, I've documented my life so far. On the right side 
+                    you can see my career and research profile.
+                    I consider myself a decent cook (pwease look at the images and judge for yourself) 
+                    so I'll also be putting images of my creations on the left!
+                </p>
+            </div>
+            <div class="image-box">
+                <img src="./resources/pic-fest.jpg" alt="Your Image">
+            </div>
+        </div>
+    </div>
+
+    <div class="arrow-container">
+        <a href="pics.html" class="arrow-button left-arrow">
+            <div class="arrow-head"></div>
+            <span class="arrow-label">Pics</span>
+        </a>
+        <a href="career.html" class="arrow-button right-arrow">
+            <span class="arrow-label">Career</span>
+            <div class="arrow-head"></div>
+        </a>
+    </div>
+
     <div class="bg-image"></div>
     <div class="timeline-container">
         <div class="timeline">
@@ -48,5 +82,13 @@
             </a> 
         </div>
     </div>
+    <script type = "importmap">
+        {
+            "imports":{
+                "three": "./node_modules/three/build/three.module.js"
+            }
+        }
+    </script>
+    <script src = "./home.js" type = "module" defer></script>
 </body>
 </html>

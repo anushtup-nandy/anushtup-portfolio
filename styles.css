@@ -1,63 +1,66 @@
+/* General Reset */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-.content-wrapper {
-    width: 50%;
-    margin: 0 auto;
-    padding-top: 20vh;
-}
-
-
-h1 {
-  background-color: black;
-  color: white;
-  font-size: 40px; 
-  font-weight: bold;
-  margin: 0 auto;
-  padding: 10px;
-  width: 50%;
-  text-align: center;
-  position: fixed;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  mix-blend-mode: multiply;
-}
-
+/* Body Styling */
 body {
-    background-color: white;
-    font-family: Helvetica, sans-serif;
-    color: black;
+    background-color: #FAF3E0; /* Soft peach background */
+    font-family: 'Roboto', sans-serif;
+    color: #3E4A42; /* Dark grey text for better contrast */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    opacity: 0.9; 
 }
 
+/* Content Wrapper */
+.content-wrapper {
+    width: 60%;
+    margin: 0 auto;
+    padding-top: 15vh;
+    text-align: center;
+}
+
+/* Heading */
+h1 {
+    color: #2A3A3F; /* Muted dark grey */
+    font-size: 42px;
+    font-weight: 700;
+    background-color: rgba(255, 255, 255, 0.85); /* Translucent white */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    display: inline-block;
+}
+
+/* About Me Section */
 .about-me {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.64);
-    padding: 20px;
-    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 30px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .text {
     flex: 1;
     margin-right: 20px;
+    line-height: 1.6; /* Increased line spacing for readability */
 }
 
+/* Image Box Styling */
 .image-box {
-    width: 150px;
-    height: 225px;
-    border: 1px solid black;
-    /* border-radius: 100%; */
+    width: 200px;
+    height: 250px;
+    border-radius: 12px;
     overflow: hidden;
     flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 .image-box img {
@@ -66,53 +69,69 @@ body {
     object-fit: cover;
 }
 
+/* Background Image */
 .bg-image {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh; 
+    height: 100vh;
     background-image: url('./resources/home-page-aest.jpg');
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
-    z-index: -1; 
+    opacity: 0.5; /* Softer background image */
+    z-index: -1;
 }
 
+/* Horizontal Timeline Styling */
 .timeline-container {
-    flex: 1;
     display: flex;
+    justify-content: center; /* Center the timeline horizontally */
     align-items: center;
-    width: 100%;
-    overflow-x: auto;
-    padding: 20px 0;
-    /* margin-top: 350px;  */
+    padding: 40px 0;
     margin-top: auto;
+    width: 100%;
+    position: relative;
+    overflow-x: auto; /* Ensure scroll for overflow */
 }
 
 .timeline {
     display: flex;
+    flex-direction: row; /* Change to row for horizontal layout */
+    align-items: center;
     position: relative;
-    min-width: max-content;
-    padding: 0 20px;
+    width: auto;
+    max-width: none;
+    padding: 20px;
 }
 
 .timeline::before {
     content: '';
     position: absolute;
-    top: 10%;
-    width: 100%;
-    height: 2px;
-    background-color: black;
+    top: 50%; /* Align line vertically */
+    left: 0;
+    right: 0;
+    height: 15px;
+    background-color: #2b85bd; /* Soft blue-grey for the central line */
     z-index: -1;
 }
 
 .container {
-    width: 80px;
-    margin: 0 50px;
     position: relative;
-    text-decoration: none;
-    color: black;
+    width: auto; /* Adjust width */
+    margin: 0 40px; /* Add spacing between items */
+    padding: 0;
+    text-align: center;
+    flex: 1;
+}
+
+/* Alternating layout */
+.container:nth-child(even) .content {
+    transform: translateY(50px); /* Move content below the timeline */
+}
+
+.container:nth-child(odd) .content {
+    transform: translateY(-50px); /* Move content above the timeline */
 }
 
 .container::after {
@@ -120,74 +139,77 @@ body {
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: white;
-    border: 2px solid black;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    background-color: #FFFFFF;
+    border: 2px solid #B3C6D2;
     border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -20%);
     z-index: 1;
 }
 
 .content {
-    padding: 5px;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 4px;
-    text-align: center;
-    transition: all 0.3s ease;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
+    background-color: #FFFFFF;
+    color: #3E4A42;
+    border: 1px solid #D3E2F1;
+    border-radius: 12px;
+    padding: 10px;  
+    margin-top: 20px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+    position: relative;
 }
 
-.top .content {
-    bottom: 40px;
-}
-
-.bottom .content {
-    top: 40px;
+.container:hover .content {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .content h2 {
     margin: 0;
+    font-size: 18px;
 }
 
-.container:hover .content {
-    transform: translateX(-50%) scale(1.1);
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .timeline {
+        flex-direction: column; /* Stack vertically on smaller screens */
+    }
+
+    .container {
+        margin: 20px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .timeline::before {
+        height: 0;
+        width: 100%;
+        top: auto;
+        bottom: 0;
+        left: 0;
+    }
+
+    /* Reset transforms for smaller screens */
+    .container .content {
+        transform: translateY(0);
+    }
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-.timeline-container::-webkit-scrollbar {
-    display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.timeline-container {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-}
-
+/* Arrow Buttons */
 .arrow-container {
     position: fixed;
     top: 40%;
     left: 0;
     right: 0;
-    transform: translateY(-50%);
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    width: 90%; /* Adjust this to match the width of your content-wrapper */
+    width: 90%;
     margin: 0 auto;
-    pointer-events: none; /* This allows clicks to pass through to elements behind */
 }
 
 .arrow-button {
-    display: flex;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #88A1B9; /* Muted blue */
     color: white;
     padding: 15px 25px;
     border-radius: 30px;
@@ -195,34 +217,8 @@ body {
     font-size: 18px;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    pointer-events: auto; /* This makes the buttons clickable */
-}
-
-.left-arrow {
-    padding-right: 35px;
-}
-
-.right-arrow {
-    padding-left: 35px;
-}
-
-.arrow-head {
-    width: 0;
-    height: 0;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-}
-
-.left-arrow .arrow-head {
-    border-right: 15px solid white;
-    margin-right: 10px;
-}
-
-.right-arrow .arrow-head {
-    border-left: 15px solid white;
-    margin-left: 10px;
 }
 
 .arrow-button:hover {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: #6C8CA0; /* Darker blue on hover */
 }

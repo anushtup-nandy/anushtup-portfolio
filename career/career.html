@@ -2,58 +2,69 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anushtup Nandy - Career & Research</title>
     <link rel="stylesheet" href="career.css">
 </head>
 <body>
-
-    <div class="header" id="myHeader">
+    <header class="portfolio-header">
         <h1>Career & Research</h1>
-        <div class="info-box">
+        <p class="subtitle">My Journey in Robotics and AI</p>
+    </header>
+
+    <main class="portfolio-content">
+        <section class="intro-section">
             <p>
-                Hello! I'm a recent master's grad with a passion for robotics and AI. 
-                I spent my undergrad years at BITS and CMU, where I worked on some cool projects and wrote my thesis. 
-                Now I'm looking to bring my skills and experience to a new role and work on some exciting robotics and AI initiatives.
+                Hello! I'm a graduate student at Columbia with a passion for robotics, specializing in reinforcement learning, planning, and bio-inspired robotics.
+                My undergraduate years at BITS and CMU were filled with exciting projects and culminated in my thesis.
+                Now, I'm eager to apply my skills and experience to new challenges in robotics and AI.
             </p>
-        </div>
-    </div>
+        </section>
 
-    <div class="gallery">
-        <div class="column">
-            <a href="./Fish/fish.html">
-                <div class="image-container">
-                    <img src="./Fish/PHOTO-2022-11-23-13-50-57 1.jpg" style="width:100%">
-                    <div class="overlay-text">Bio-inspired Fish Robot</div>
-                </div>
-            </a>
-            <a href="./rf-astar/rfastar.html">
-                <div class="image-container">
-                    <img src="./rf-astar/ex-1.png" style="width:100%">
-                    <div class="overlay-text">Combinatorial Path Planning</div>
-                </div>
-            </a>
-            <a href="./minor-others/others.html">
-                <div class="image-container">
-                    <img src = "./minor-others/scara-cad.png" style = "width:100%">
-                    <div class="overlay-text">Other Projects</div>
-                </div>    
-            </a>
-        </div>
-        <div class="column">
-            <a href="./dqn/dqn.html">
-                <div class="image-container">
-                    <img src="./dqn/Map1_expl.png" style="width:100%">
-                    <div class="overlay-text">Reinforcement Learning</div>
-                </div>
-            </a>
-            <a href="./hopper/hopper.html">
-                <div class="image-container">
-                    <img src="./hopper/h1.png" style="width:100%">
-                    <div class="overlay-text">Raibert Hopper</div>
-                </div>
-            </a>
-        </div>
-    </div>
+        <section class="gallery">
+            <div class="gallery-column">
+                <a href="./Fish/fish.html" class="gallery-item">
+                    <img src="./Fish/PHOTO-2022-11-23-13-50-57 1.jpg" alt="Bio-inspired Fish Robot">
+                    <div class="overlay">
+                        <div class="overlay-text">Bio-inspired Fish Robot</div>
+                    </div>
+                </a>
+                <a href="./rf-astar/rfastar.html" class="gallery-item">
+                    <img src="./rf-astar/ex-1.png" alt="Combinatorial Path Planning">
+                    <div class="overlay">
+                        <div class="overlay-text">Combinatorial Path Planning</div>
+                    </div>
+                </a>
+                <a href="./minor-others/others.html" class="gallery-item">
+                    <img src="./minor-others/scara-cad.png" alt="Other Projects">
+                    <div class="overlay">
+                        <div class="overlay-text">Other Projects</div>
+                    </div>
+                </a>
+            </div>
+            <div class="gallery-column">
+                <a href="./dqn/dqn.html" class="gallery-item">
+                    <img src="./dqn/Map1_expl.png" alt="Reinforcement Learning">
+                    <div class="overlay">
+                        <div class="overlay-text">Reinforcement Learning</div>
+                    </div>
+                </a>
+                <a href="./hopper/hopper.html" class="gallery-item">
+                    <img src="./hopper/h1.png" alt="Raibert Hopper">
+                    <div class="overlay">
+                        <div class="overlay-text">Raibert Hopper</div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
 
-    <script src="script.js"></script>
+    <script type="importmap">
+        {
+            "imports":{
+                "three": "../node_modules/three/build/three.module.js"
+            }
+        }
+    </script>
+    <script src="career.js" type="module" defer></script>
 </body>
 </html>

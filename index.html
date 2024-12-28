@@ -3,93 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Anushtup's Corner!</title>
+    <title>Anushtup Nandy - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="content-wrapper">
-        <h1>Welcome to Anushtup's Corner!</h1>
-        <div class="about-me">
-            <div class="text">
-                <p>Hi! I'm Anushtup Nandy, a graduate student in Mechanical 
-                    Engineering at Columbia University. 
-                    I love robotics, food, birds, travelling and journaling.
-                    I've done my undergradaute in Mechanical Eng. from BITS-Pilani in India
-                    and I specialized in Robotics, and I'll also be specializing in Robotics at
-                    Columbia! 
+    <header class="portfolio-header">
+        <h1>Anushtup Nandy</h1>
+        <p class="subtitle">Mechanical Engineering Graduate Student at Columbia University</p>
+    </header>
+
+    <main class="portfolio-content">
+        <section class="about-section">
+            <div class="about-text">
+                <p>Hi! I'm Anushtup Nandy, a graduate student in Mechanical Engineering at Columbia University. 
+                    I love robotics, food, birds, traveling, and journaling. I completed my undergraduate degree in Mechanical Engineering from BITS-Pilani in India, 
+                    where I specialized in Robotics. I'm continuing my specialization in Robotics at Columbia!
                 </p>
                 <p>
-                    On the timeline below, I've documented my life so far. On the right side 
-                    you can see my career and research profile.
-                    I consider myself a decent cook (please look at the images and judge for yourself) 
-                    so I'll also be putting images of my creations on the left!
+                    Here, I've compiled a snapshot of my journey so far. Explore my career and research profile, 
+                    and get a taste of my culinary creations on the left. I'm passionate about my field and also consider myself a decent cook — feel free to judge my creations!
                 </p>
             </div>
-            <div class="image-box">
-                <img src="./resources/pic-fest.jpg" alt="Your Image">
+            <div class="profile-image">
+                <img src="./resources/Columbia.jpg" alt="Anushtup Nandy">
             </div>
-        </div>
-    </div>
+        </section>
 
-    <div class="arrow-container">
-        <a href="./pics/pics.html" class="arrow-button left-arrow">
-            <div class="arrow-head"></div>
-            <span class="arrow-label">Pics</span>
-        </a>
-        <a href="./career/career.html" class="arrow-button right-arrow">
-            <span class="arrow-label">Career</span>
-            <div class="arrow-head"></div>
-        </a>
-    </div>
+        <section class="gallery">
+            <div class="gallery-item" data-year="2018">
+                <div class="gallery-front">2018</div>
+            </div>
+            <div class="gallery-item" data-year="2019">
+                <div class="gallery-front">2019</div>
+            </div>
+            <div class="gallery-item" data-year="2020">
+                <div class="gallery-front">2020</div>
+            </div>
+            <div class="gallery-item" data-year="2021">
+                <div class="gallery-front">2021</div>
+            </div>
+            <div class="gallery-item" data-year="2022">
+                <div class="gallery-front">2022</div>
+            </div>
+            <div class="gallery-item" data-year="2023">
+                <div class="gallery-front">2023</div>
+            </div>
+            <div class="gallery-item" data-year="2024">
+                <div class="gallery-front">2024</div>
+            </div>
+        </section>
+    </main>
 
-    <div class="bg-image"></div>
-    <div class="timeline-container">
-        <div class="timeline">
-            <a href="./years/2018.html" class="container top">
-                <div class="content">
-                    <h2>2018</h2>
-                </div>
-            </a>
-            <a href="./years/2019.html" class="container bottom">
-                <div class="content">
-                    <h2>2019</h2>
-                </div>
-            </a>
-            <a href="./years/2020.html" class="container top">
-                <div class="content">
-                    <h2>2020</h2>
-                </div>
-            </a>
-            <a href="./years/2021.html" class="container bottom">
-                <div class="content">
-                    <h2>2021</h2>
-                </div>
-            </a>
-            <a href="./years/2022.html" class="container top">
-                <div class="content">
-                    <h2>2022</h2>
-                </div>
-            </a>
-            <a href="./years/2023.html" class="container bottom">
-                <div class="content">
-                    <h2>2023</h2>
-                </div>
-            </a>
-            <a href="./years/2024.html" class = "container top">
-                <div class="content">
-                    <h2>2024</h2>
-                </div>
-            </a> 
-        </div>
-    </div>
-    <script type = "importmap">
+    <nav class="portfolio-nav">
+        <a href="./pics/pics.html" class="nav-button nav-left">
+            My Recipes
+        </a>
+        <a href="./career/career.html" class="nav-button nav-right">
+            Career
+        </a>
+    </nav>
+
+    <script type="importmap">
         {
             "imports":{
                 "three": "./node_modules/three/build/three.module.js"
             }
         }
     </script>
-    <script src = "./home.js" type = "module" defer></script>
+    <script src="./home.js" type="module" defer></script>
 </body>
 </html>
